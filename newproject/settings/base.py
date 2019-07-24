@@ -93,3 +93,12 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+
+# User model and authentication configuration
+# -- uncomment and specify ( appname.UserModel ) for custom user account
+# AUTH_USER_MODEL = 'users.BaseUser'
+
+LOGIN_URL = '/'
+LOGIN_REDIRECT_URL = '/login/'
+
+LOGOUT_REDIRECT_URL = '/'
