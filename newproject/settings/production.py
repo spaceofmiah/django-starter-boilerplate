@@ -10,10 +10,10 @@ ALLOWED_HOSTS = ['your-domain-ip', 'www.your-website-name.com',]
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres_pycopg2',
-        'NAME': 'your-db-name',
-        'USER': 'your-db-user',
-        'PASSWORD': 'your-db-password',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('DB_NAME', ''),
+        'USER': os.environ.get('DB_USER', ''),
+        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
         'HOST': 'localhost',
         'PORT': ''
     }
