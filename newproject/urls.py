@@ -22,11 +22,19 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-if settings.DEBUG == True:
-    # helps to serve static files during development
-	urlpatterns += static(
-		settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-	# helps to serve media files (files uploaded by user) during 
-	# development
-	urlpatterns += static(
-		settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+### uncomment the below code with 1 hash (#) to use static
+### and media files for your app during development
+
+# if settings.DEBUG == True:
+    
+    ### helps to serve static files during development
+
+	# urlpatterns += static(
+	# 	settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+	
+    ### helps to serve media files (files uploaded by user) during 
+	### development
+
+	# urlpatterns += static(
+	# 	settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
