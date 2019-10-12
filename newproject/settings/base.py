@@ -88,11 +88,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# path were static files will be collected after deployment
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"), ]
 
 MEDIA_URL = '/media/'
+# path were media files will be collected after deployment
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_root')
+
+# static files not tied to any particular apps, but utilized by
+# more than one app
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "resources"), ]
 
 # User model and authentication configuration
 # -- uncomment and specify ( appname.UserModel ) for custom user account
